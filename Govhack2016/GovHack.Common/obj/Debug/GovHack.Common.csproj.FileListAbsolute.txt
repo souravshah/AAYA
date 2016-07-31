@@ -1,0 +1,7 @@
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Common\bin\Debug\GovHack.Common.dll
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Common\bin\Debug\GovHack.Common.pdb
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Common\bin\Debug\Wurfl.Aspnet.Extensions.dll
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Common\bin\Debug\Wurfl.dll
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Common\obj\Debug\GovHack.Common.dll
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Common\obj\Debug\GovHack.Common.pdb
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Common\obj\Debug\GovHack.Common.csprojResolveAssemblyReference.cache

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="aayaDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ChildCareOperations">
+          <Key>
+            <PropertyRef Name="ChildCareKey" />
+          </Key>
+          <Property Name="ChildCareKey" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LocationId" Type="float" Nullable="false" />
+          <Property Name="AgeGroup" Type="varchar" MaxLength="250" />
+          <Property Name="HourlyPrice" Type="decimal" Precision="12" Scale="3" />
+          <Property Name="DailyPrice" Type="decimal" Precision="12" Scale="3" />
+        </EntityType>
+        <EntityType Name="Crime">
+          <Key>
+            <PropertyRef Name="Suburb" />
+          </Key>
+          <Property Name="Suburb" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Score" Type="float" />
+          <Property Name="Category" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Locations">
+          <Key>
+            <PropertyRef Name="LOCATION_ID" />
+          </Key>
+          <Property Name="LOCATION_ID" Type="float" Nullable="false" />
+          <Property Name="ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="TYPE_OF_PROVIDER" Type="nvarchar" MaxLength="255" />
+          <Property Name="PROVIDER_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="ADDRESS" Type="nvarchar" MaxLength="255" />
+          <Property Name="SUBURB" Type="nvarchar" MaxLength="255" />
+          <Property Name="STATE" Type="nvarchar" MaxLength="255" />
+          <Property Name="POSTCODE" Type="float" />
+          <Property Name="LATITUDE" Type="float" />
+          <Property Name="LONGITUDE" Type="float" />
+          <Property Name="GEO_DATA" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'aayaDb.dbo.transport' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="transport">
+          <Key>
+            <PropertyRef Name="IsTrain" />
+            <PropertyRef Name="Bus" />
+            <PropertyRef Name="Lift" />
+            <PropertyRef Name="Wheelchairaccessible" />
+          </Key>
+          <Property Name="LOCATION_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="TSN" Type="float" />
+          <Property Name="X_COORD" Type="float" />
+          <Property Name="Y_COORD" Type="float" />
+          <Property Name="EFA_ID" Type="float" />
+          <Property Name="PHONE" Type="nvarchar" MaxLength="255" />
+          <Property Name="ADDRESS" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsTrain" Type="bit" Nullable="false" />
+          <Property Name="Bus" Type="bit" Nullable="false" />
+          <Property Name="Lift" Type="bit" Nullable="false" />
+          <Property Name="Wheelchairaccessible" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="aayaDbModelStoreContainer">
+          <EntitySet Name="ChildCareOperations" EntityType="Self.ChildCareOperations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Crime" EntityType="Self.Crime" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="transport" EntityType="Self.transport" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [transport].[LOCATION_NAME] AS [LOCATION_NAME], 
+    [transport].[TSN] AS [TSN], 
+    [transport].[X_COORD] AS [X_COORD], 
+    [transport].[Y_COORD] AS [Y_COORD], 
+    [transport].[EFA_ID] AS [EFA_ID], 
+    [transport].[PHONE] AS [PHONE], 
+    [transport].[ADDRESS] AS [ADDRESS], 
+    [transport].[IsTrain] AS [IsTrain], 
+    [transport].[Bus] AS [Bus], 
+    [transport].[Lift] AS [Lift], 
+    [transport].[Wheelchairaccessible] AS [Wheelchairaccessible]
+    FROM [dbo].[transport] AS [transport]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="aayaDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="aayaDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ChildCareOperations" EntityType="aayaDbModel.ChildCareOperations" />
+          <EntitySet Name="Crime" EntityType="aayaDbModel.Crime" />
+          <EntitySet Name="Locations" EntityType="aayaDbModel.Locations" />
+          <EntitySet Name="transport" EntityType="aayaDbModel.transport" />
+        </EntityContainer>
+        <EntityType Name="ChildCareOperations">
+          <Key>
+            <PropertyRef Name="ChildCareKey" />
+          </Key>
+          <Property Name="ChildCareKey" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LocationId" Type="Double" Nullable="false" />
+          <Property Name="AgeGroup" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="HourlyPrice" Type="Decimal" Precision="12" Scale="3" />
+          <Property Name="DailyPrice" Type="Decimal" Precision="12" Scale="3" />
+        </EntityType>
+        <EntityType Name="Crime">
+          <Key>
+            <PropertyRef Name="Suburb" />
+          </Key>
+          <Property Name="Suburb" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Score" Type="Double" />
+          <Property Name="Category" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Locations">
+          <Key>
+            <PropertyRef Name="LOCATION_ID" />
+          </Key>
+          <Property Name="LOCATION_ID" Type="Double" Nullable="false" />
+          <Property Name="ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TYPE_OF_PROVIDER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PROVIDER_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ADDRESS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SUBURB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="POSTCODE" Type="Double" />
+          <Property Name="LATITUDE" Type="Double" />
+          <Property Name="LONGITUDE" Type="Double" />
+          <Property Name="GEO_DATA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="transport">
+          <Key>
+            <PropertyRef Name="IsTrain" />
+            <PropertyRef Name="Bus" />
+            <PropertyRef Name="Lift" />
+            <PropertyRef Name="Wheelchairaccessible" />
+          </Key>
+          <Property Name="LOCATION_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TSN" Type="Double" />
+          <Property Name="X_COORD" Type="Double" />
+          <Property Name="Y_COORD" Type="Double" />
+          <Property Name="EFA_ID" Type="Double" />
+          <Property Name="PHONE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ADDRESS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsTrain" Type="Boolean" Nullable="false" />
+          <Property Name="Bus" Type="Boolean" Nullable="false" />
+          <Property Name="Lift" Type="Boolean" Nullable="false" />
+          <Property Name="Wheelchairaccessible" Type="Boolean" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="aayaDbModelStoreContainer" CdmEntityContainer="aayaDbEntities">
+          <EntitySetMapping Name="ChildCareOperations">
+            <EntityTypeMapping TypeName="aayaDbModel.ChildCareOperations">
+              <MappingFragment StoreEntitySet="ChildCareOperations">
+                <ScalarProperty Name="DailyPrice" ColumnName="DailyPrice" />
+                <ScalarProperty Name="HourlyPrice" ColumnName="HourlyPrice" />
+                <ScalarProperty Name="AgeGroup" ColumnName="AgeGroup" />
+                <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+                <ScalarProperty Name="ChildCareKey" ColumnName="ChildCareKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Crime">
+            <EntityTypeMapping TypeName="aayaDbModel.Crime">
+              <MappingFragment StoreEntitySet="Crime">
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locations">
+            <EntityTypeMapping TypeName="aayaDbModel.Locations">
+              <MappingFragment StoreEntitySet="Locations">
+                <ScalarProperty Name="GEO_DATA" ColumnName="GEO_DATA" />
+                <ScalarProperty Name="LONGITUDE" ColumnName="LONGITUDE" />
+                <ScalarProperty Name="LATITUDE" ColumnName="LATITUDE" />
+                <ScalarProperty Name="POSTCODE" ColumnName="POSTCODE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="SUBURB" ColumnName="SUBURB" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="PROVIDER_NAME" ColumnName="PROVIDER_NAME" />
+                <ScalarProperty Name="TYPE_OF_PROVIDER" ColumnName="TYPE_OF_PROVIDER" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="LOCATION_ID" ColumnName="LOCATION_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="transport">
+            <EntityTypeMapping TypeName="aayaDbModel.transport">
+              <MappingFragment StoreEntitySet="transport">
+                <ScalarProperty Name="Wheelchairaccessible" ColumnName="Wheelchairaccessible" />
+                <ScalarProperty Name="Lift" ColumnName="Lift" />
+                <ScalarProperty Name="Bus" ColumnName="Bus" />
+                <ScalarProperty Name="IsTrain" ColumnName="IsTrain" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+                <ScalarProperty Name="EFA_ID" ColumnName="EFA_ID" />
+                <ScalarProperty Name="Y_COORD" ColumnName="Y_COORD" />
+                <ScalarProperty Name="X_COORD" ColumnName="X_COORD" />
+                <ScalarProperty Name="TSN" ColumnName="TSN" />
+                <ScalarProperty Name="LOCATION_NAME" ColumnName="LOCATION_NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,50 @@
+﻿<div>
+    <div>
+        <ng-include src="'Templates/mobileFilter.html'" autoscroll="false" />
+    </div>
+    <div class="row">
+        <div class="column-2">
+            <span>&nbsp;</span>
+        </div>
+        <div class="column-2">
+            <span>&nbsp;</span>
+        </div>
+        <div class="column-2">
+            <span>&nbsp;</span>
+        </div>
+        <div class="column-2">
+            <span>&nbsp;</span>
+        </div>
+        <div class="column-2">
+            <span>&nbsp;</span>
+        </div>
+        <div class="column-2">
+            <a ng-click="vm.showFilter();"><span>Filter</span></a>
+        </div>
+    </div>
+    <div class="row border-top" ng-repeat="item in vm.allChildCares">
+        <div class="column-12">
+            <div class="column-12 subHeader">
+                <span>{{item.Name}}</span>
+            </div>
+            <div class="column-12">
+                <span>{{item.Address}}</span>
+            </div>
+            <div class="column-12">
+                <i class="fa fa-phone"></i>&nbsp;<span>{{item.PhoneNumber}}</span>
+            </div>
+            <div class="column-12">
+                <div ng-show="item.Availability.length > 0" class="subHeader">
+                    <span>Vacancies</span>
+                </div>
+            </div>
+            <div class="column-12">
+                <div ng-repeat="vacancy in item.Availability">
+                    <div class="column-4 button">
+                        <a ng-click="bookVacancy(vacancy)">{{vacancy.Category}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

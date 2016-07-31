@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html ng-app="gHackChildCare">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Govhack 2016</title>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA33swsSU1sw2nOllXZhB9cJ1bsfp-OV1U">
+
+    </script>
+    <script src="https://use.fontawesome.com/8e7c814e17.js"></script>
+    <script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!--UI SELECT REFERENCE-->
+    <link href="~/Content/ui-select/select.css" rel="stylesheet" />
+    <link href="~/Content/ui-select/select2.css" rel="stylesheet" />
+    <link href="~/Content/ui-select/select2-bootstrap.css" rel="stylesheet" />
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.2.0/es5-shim.js"></script>
+      <script>
+        document.createElement('ui-select');
+        document.createElement('ui-select-match');
+        document.createElement('ui-select-choices');
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+    <div>
+        @RenderBody()
+        <hr />
+        <footer></footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/angular")
+    
+    <script src="../../App_Scripts/Services/SearchAndFilterService.js"></script>
+    <script src="../../App_Scripts/Services/MapsService.js"></script>
+    <script src="../../App_Scripts/Common/MenuController.js"></script>
+    <script src="../../App_Scripts/Common/FilterController.js"></script>
+    <script src="../../App_Scripts/Home/Controller/HomeController.js"></script>
+    <script src="../../App_Scripts/Results/Controller/ResultsController.js"></script>
+
+    @RenderSection("scripts", required: false)
+
+    <!-- *************** SCRIPT TO MAKE THE MOBILE NAV EXPAND****************** -->
+    <script>
+        $(document).ready(function () {
+            var b_c = false;
+            $(".nav-button").click(function () {
+                if (!WURFL.is_mobile) {
+                    $(".nav-button,.menu-nav").toggleClass("open");
+                    b_c = true;
+                }
+                else {
+                    $(".nav-button,.menu-nav").toggleClass("open");
+                    $(".cover").toggleClass("open");
+                }
+            });
+            if (!WURFL.is_mobile) {
+                $(".contentWrapper").click(function () {
+                    if (!b_c) {
+                        $(".nav-button,.menu-nav").removeClass("open");
+                        b_c = true;
+                    }
+                    else if (b_c === true) {
+                        b_c = false;
+                    }
+                });
+            }
+            else {
+                $(".cover").click(function () {
+                    $(".nav-button,.menu-nav").toggleClass("open");
+                    $(".cover").toggleClass("open");
+                });
+            }
+        });
+    </script>
+</body>
+</html>

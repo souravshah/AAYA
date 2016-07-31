@@ -1,0 +1,145 @@
+﻿<div data-ng-controller="filterController as vm">
+    <div ng-if="vm.showFilter" class="dialog">
+        <div class="row">
+            <div class="col-4">
+                <span>&nbsp;</span>
+            </div>
+            <div class="col-4 subHeaderCenter">
+                <span>&nbsp;</span>
+            </div>
+            <div class="col-4">
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column-12">
+                <div class="col-4">
+                    <span>&nbsp;</span>
+                </div>
+                <div class="col-4 subHeaderCenter">
+                    <span>Filters</span>
+                </div>
+                <div class="col-4">
+                    <span>&nbsp;</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div style="background-color: rgb(251,189,50); display: table; width: 100%;">
+                <div class="col-3">
+                    <div style="font-weight: 700;">
+                        <a ng-click="vm.cancelFilter();"><span>CANCEL</span></a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <span>&nbsp;</span>
+                </div>
+                <div class="col-3">
+                    <span>&nbsp;</span>
+                </div>
+                <div class="col-3">
+                    <div style="font-weight: 700; float: right;">
+                        <a ng-click="vm.applyFilter();"><span>DONE</span></a>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <!--PRICE-->
+        <div class="row">
+            <div class="column-12">
+                <div class="subHeader"><span>Price</span></div>
+            </div>
+            <div class="col-6">
+                <span>Budget( < $10/hour)</span>
+            </div>
+            <div class="col-6">
+                <input type="checkbox" />
+            </div>
+            <div class="col-6">
+                <span>Mid range( < $20/hour)</span>
+            </div>
+            <div class="col-6">
+                <input type="checkbox" />
+            </div>
+            <div class="col-6">
+                <span>Pricy( > $20/hour)</span>
+            </div>
+            <div class="col-6">
+                <input type="checkbox" />
+            </div>
+        </div>
+        <!--TRANSPORT-->
+        <div class="row">
+            <div class="column-12">
+                <div class="subHeader"><span>Transport</span></div>
+            </div>
+            <div class="col-6">
+                <span>Near Train stations</span>
+            </div>
+            <div class="col-6">
+                <input type="checkbox" />
+            </div>
+            <div class="col-6">
+                <span>Near Bus stop</span>
+            </div>
+            <div class="col-6">
+                <input type="checkbox" />
+            </div>
+            <div class="col-6">
+                <span>Train stations with lifts</span>
+            </div>
+            <div class="col-6">
+                <input type="checkbox" />
+            </div>
+            <div class="col-6">
+                <span>Wheel chair access</span>
+            </div>
+            <div class="col-6">
+                <input type="checkbox" />
+            </div>
+        </div>
+        <!--HEALTH FACILITIES-->
+        <div class="row">
+            <div class="column-12">
+                <div class="subHeader"><span>Health and Wellbeing</span></div>
+
+            </div>
+            <div class="col-6">
+                <span>Near Health Centres</span>
+            </div>
+            <div class="col-6">
+                <input type="checkbox" />
+            </div>
+            <div class="col-6">
+                <span>Near Parks</span>
+            </div>
+            <div class="col-6">
+                <input type="checkbox" />
+            </div>
+        </div>
+        <!--OTHERS-->
+        <div class="row">
+            <div class="column-12">
+                <div class="subHeader"><span>Others</span></div>
+            </div>
+            <div class="col-6">
+                <span>Special Learning needs</span>
+            </div>
+            <div class="col-6">
+                <input type="checkbox" />
+            </div>
+            <div class="col-6">
+                <span>Non profit</span>
+            </div>
+            <div class="col-6">
+                <input type="checkbox" />
+            </div>
+            <div class="col-6">
+                <span>Not affiliated to religious organization</span>
+            </div>
+            <div class="col-6">
+                <input type="checkbox"/>
+            </div>
+        </div>        
+    </div>
+</div>

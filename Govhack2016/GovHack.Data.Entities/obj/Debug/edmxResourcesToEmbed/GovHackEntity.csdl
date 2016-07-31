@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="aayaDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="aayaDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ChildCareOperations" EntityType="aayaDbModel.ChildCareOperations" />
+    <EntitySet Name="Crime" EntityType="aayaDbModel.Crime" />
+    <EntitySet Name="Locations" EntityType="aayaDbModel.Locations" />
+    <EntitySet Name="transport" EntityType="aayaDbModel.transport" />
+  </EntityContainer>
+  <EntityType Name="ChildCareOperations">
+    <Key>
+      <PropertyRef Name="ChildCareKey" />
+    </Key>
+    <Property Name="ChildCareKey" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LocationId" Type="Double" Nullable="false" />
+    <Property Name="AgeGroup" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="HourlyPrice" Type="Decimal" Precision="12" Scale="3" />
+    <Property Name="DailyPrice" Type="Decimal" Precision="12" Scale="3" />
+  </EntityType>
+  <EntityType Name="Crime">
+    <Key>
+      <PropertyRef Name="Suburb" />
+    </Key>
+    <Property Name="Suburb" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Score" Type="Double" />
+    <Property Name="Category" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Locations">
+    <Key>
+      <PropertyRef Name="LOCATION_ID" />
+    </Key>
+    <Property Name="LOCATION_ID" Type="Double" Nullable="false" />
+    <Property Name="ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TYPE_OF_PROVIDER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PROVIDER_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ADDRESS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUBURB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="STATE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="POSTCODE" Type="Double" />
+    <Property Name="LATITUDE" Type="Double" />
+    <Property Name="LONGITUDE" Type="Double" />
+    <Property Name="GEO_DATA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="transport">
+    <Key>
+      <PropertyRef Name="IsTrain" />
+      <PropertyRef Name="Bus" />
+      <PropertyRef Name="Lift" />
+      <PropertyRef Name="Wheelchairaccessible" />
+    </Key>
+    <Property Name="LOCATION_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TSN" Type="Double" />
+    <Property Name="X_COORD" Type="Double" />
+    <Property Name="Y_COORD" Type="Double" />
+    <Property Name="EFA_ID" Type="Double" />
+    <Property Name="PHONE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ADDRESS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsTrain" Type="Boolean" Nullable="false" />
+    <Property Name="Bus" Type="Boolean" Nullable="false" />
+    <Property Name="Lift" Type="Boolean" Nullable="false" />
+    <Property Name="Wheelchairaccessible" Type="Boolean" Nullable="false" />
+  </EntityType>
+</Schema>

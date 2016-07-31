@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="aayaDbModelStoreContainer" CdmEntityContainer="aayaDbEntities">
+    <EntitySetMapping Name="ChildCareOperations">
+      <EntityTypeMapping TypeName="aayaDbModel.ChildCareOperations">
+        <MappingFragment StoreEntitySet="ChildCareOperations">
+          <ScalarProperty Name="DailyPrice" ColumnName="DailyPrice" />
+          <ScalarProperty Name="HourlyPrice" ColumnName="HourlyPrice" />
+          <ScalarProperty Name="AgeGroup" ColumnName="AgeGroup" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="ChildCareKey" ColumnName="ChildCareKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Crime">
+      <EntityTypeMapping TypeName="aayaDbModel.Crime">
+        <MappingFragment StoreEntitySet="Crime">
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="aayaDbModel.Locations">
+        <MappingFragment StoreEntitySet="Locations">
+          <ScalarProperty Name="GEO_DATA" ColumnName="GEO_DATA" />
+          <ScalarProperty Name="LONGITUDE" ColumnName="LONGITUDE" />
+          <ScalarProperty Name="LATITUDE" ColumnName="LATITUDE" />
+          <ScalarProperty Name="POSTCODE" ColumnName="POSTCODE" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="SUBURB" ColumnName="SUBURB" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="PROVIDER_NAME" ColumnName="PROVIDER_NAME" />
+          <ScalarProperty Name="TYPE_OF_PROVIDER" ColumnName="TYPE_OF_PROVIDER" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LOCATION_ID" ColumnName="LOCATION_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transport">
+      <EntityTypeMapping TypeName="aayaDbModel.transport">
+        <MappingFragment StoreEntitySet="transport">
+          <ScalarProperty Name="Wheelchairaccessible" ColumnName="Wheelchairaccessible" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Bus" ColumnName="Bus" />
+          <ScalarProperty Name="IsTrain" ColumnName="IsTrain" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="EFA_ID" ColumnName="EFA_ID" />
+          <ScalarProperty Name="Y_COORD" ColumnName="Y_COORD" />
+          <ScalarProperty Name="X_COORD" ColumnName="X_COORD" />
+          <ScalarProperty Name="TSN" ColumnName="TSN" />
+          <ScalarProperty Name="LOCATION_NAME" ColumnName="LOCATION_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

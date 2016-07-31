@@ -1,0 +1,117 @@
+﻿<div class="row">
+    <div class="column-12">
+        <form name="guardianRegistrationForm" novalidate>
+            <div class="row">
+                <div class="column-12">
+                    <span>&nbsp;</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-12">
+                    <span>&nbsp;</span>
+                </div>
+            </div>
+            <div class="row" ng-if="!editMode">
+                <div class="admin-table">
+                    <div style="float:right">
+                        <div class="column-12">
+                            <div class="admin-booking">
+                                <div>
+                                    <a ng-click="addNewServiceOption()">ADD</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-12">
+                    <span>&nbsp;</span>
+                </div>
+            </div>
+            <div class="row" ng-if="!editMode">
+                <div>
+                    <div>
+                        <div class="column-12">
+                            <div class="column-3">
+                                <span>DATE OF BIRTH</span>
+                            </div>
+                            <div class="column-2">
+                                <span>GENDER</span>
+                            </div>
+                            <div class="column-3">
+                                <span>MEDICAL HISTORY/ALLERGIES</span>
+                            </div>
+                            <div class="column-2">
+                                <span>&nbsp;</span>
+                            </div>
+                            <div class="column-2">
+                                <span>&nbsp;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div ng-repeat="item in allServices">
+                            <div class="column-3">
+                                <span>{{item.dateOfBirth}}</span>
+                            </div>
+                            <div class="column-2">
+                                <span>{{item.gender}}</span>
+                            </div>
+                            <div class="column-3">
+                                <span>{{item.medicalHistory}}</span>
+                            </div>
+                            <div class="column-2">
+                                <div ng-click="editSelectedChildDetails(item)">
+                                    <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="column-2">
+                                <div ng-click="deleteSelectedChildDetails(item)">
+                                    <i class="fa fa-trash-o fa-lg" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-if="editMode">
+                <div class="row">
+                    <div class="column-12">
+                        <div>
+                            <span>Date of Birth</span>
+                        </div>
+                        <div>
+                            <input type="text" ng-model="" required placeholder="date" id="dateOfBirth" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column-12">
+                        <div>
+                            <span>Gender</span>
+                        </div>
+                        <div>
+                            <ui-select ng-model="" theme="selectize">
+                                <ui-select-match placeholder="gender">{{$select.selected.gender}}</ui-select-match>
+                                <ui-select-choices repeat="item in allGenders | filter: $select.search">
+                                    <span ng-bind-html="item.gender | highlight: $select.search"></span>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column-12">
+                        <div>
+                            <span>Medical History/ Allergies</span>
+                        </div>
+                        <div>
+                            <textarea type="text" ng-model="" class="multiline" placeholder="allergies/medical history"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+﻿<!--MENU REFERENCE-->
+<link href="~/Content/mobilemenu.css" rel="stylesheet"/>
+<!--UI SELECT REFERENCE-->
+<link href="~/Content/ui-select/select.css" rel="stylesheet" />
+<link href="~/Content/ui-select/select2.css" rel="stylesheet" />
+<link href="~/Content/ui-select/select2-bootstrap.css" rel="stylesheet" />
+
+<div id="colorbar">
+</div>
+<div class="cover"></div>
+<div>
+    @Html.Partial("../Partial/_mobilemenu")
+</div>
+<div class="contentWrapper">
+    <section>
+        <div class="uppercontent">
+            <div ui-view></div>
+        </div>
+    </section>
+</div>

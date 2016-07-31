@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="aayaDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ChildCareOperations">
+    <Key>
+      <PropertyRef Name="ChildCareKey" />
+    </Key>
+    <Property Name="ChildCareKey" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LocationId" Type="float" Nullable="false" />
+    <Property Name="AgeGroup" Type="varchar" MaxLength="250" />
+    <Property Name="HourlyPrice" Type="decimal" Precision="12" Scale="3" />
+    <Property Name="DailyPrice" Type="decimal" Precision="12" Scale="3" />
+  </EntityType>
+  <EntityType Name="Crime">
+    <Key>
+      <PropertyRef Name="Suburb" />
+    </Key>
+    <Property Name="Suburb" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Score" Type="float" />
+    <Property Name="Category" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Locations">
+    <Key>
+      <PropertyRef Name="LOCATION_ID" />
+    </Key>
+    <Property Name="LOCATION_ID" Type="float" Nullable="false" />
+    <Property Name="ID" Type="nvarchar" MaxLength="255" />
+    <Property Name="TYPE_OF_PROVIDER" Type="nvarchar" MaxLength="255" />
+    <Property Name="PROVIDER_NAME" Type="nvarchar" MaxLength="255" />
+    <Property Name="ADDRESS" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUBURB" Type="nvarchar" MaxLength="255" />
+    <Property Name="STATE" Type="nvarchar" MaxLength="255" />
+    <Property Name="POSTCODE" Type="float" />
+    <Property Name="LATITUDE" Type="float" />
+    <Property Name="LONGITUDE" Type="float" />
+    <Property Name="GEO_DATA" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'aayaDb.dbo.transport' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="transport">
+    <Key>
+      <PropertyRef Name="IsTrain" />
+      <PropertyRef Name="Bus" />
+      <PropertyRef Name="Lift" />
+      <PropertyRef Name="Wheelchairaccessible" />
+    </Key>
+    <Property Name="LOCATION_NAME" Type="nvarchar" MaxLength="255" />
+    <Property Name="TSN" Type="float" />
+    <Property Name="X_COORD" Type="float" />
+    <Property Name="Y_COORD" Type="float" />
+    <Property Name="EFA_ID" Type="float" />
+    <Property Name="PHONE" Type="nvarchar" MaxLength="255" />
+    <Property Name="ADDRESS" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsTrain" Type="bit" Nullable="false" />
+    <Property Name="Bus" Type="bit" Nullable="false" />
+    <Property Name="Lift" Type="bit" Nullable="false" />
+    <Property Name="Wheelchairaccessible" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="aayaDbModelStoreContainer">
+    <EntitySet Name="ChildCareOperations" EntityType="Self.ChildCareOperations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Crime" EntityType="Self.Crime" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="transport" EntityType="Self.transport" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [transport].[LOCATION_NAME] AS [LOCATION_NAME], 
+    [transport].[TSN] AS [TSN], 
+    [transport].[X_COORD] AS [X_COORD], 
+    [transport].[Y_COORD] AS [Y_COORD], 
+    [transport].[EFA_ID] AS [EFA_ID], 
+    [transport].[PHONE] AS [PHONE], 
+    [transport].[ADDRESS] AS [ADDRESS], 
+    [transport].[IsTrain] AS [IsTrain], 
+    [transport].[Bus] AS [Bus], 
+    [transport].[Lift] AS [Lift], 
+    [transport].[Wheelchairaccessible] AS [Wheelchairaccessible]
+    FROM [dbo].[transport] AS [transport]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

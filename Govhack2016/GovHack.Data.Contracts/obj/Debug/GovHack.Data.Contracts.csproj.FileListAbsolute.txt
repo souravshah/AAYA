@@ -1,0 +1,9 @@
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Contracts\bin\Debug\GovHack.Data.Contracts.dll
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Contracts\bin\Debug\GovHack.Data.Contracts.pdb
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Contracts\obj\Debug\GovHack.Data.Contracts.csprojResolveAssemblyReference.cache
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Contracts\obj\Debug\GovHack.Data.Contracts.dll
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Contracts\obj\Debug\GovHack.Data.Contracts.pdb
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Contracts\bin\Debug\GovHack.Data.Entities.dll
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Contracts\bin\Debug\EntityFramework.dll
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Contracts\bin\Debug\GovHack.Data.Entities.pdb
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Contracts\bin\Debug\EntityFramework.xml

@@ -1,0 +1,62 @@
+﻿<div class="row">
+    <div class="column-12">
+        <form name="guardianRegistrationForm" novalidate>
+            <!--row start-->
+            <div class="row">
+                <div class="column-12">
+                    <div>
+                        <span>Name</span>
+                    </div>
+                    <div>
+                        <input type="text" required placeholder="your name" id="name" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-12">
+                    <div>
+                        <span>Address Line 1</span>
+                    </div>
+                    <div>
+                        <input type="text" ng-model="" required placeholder="house number" id="addressline1" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-12">
+                    <div>
+                        <span>Address Line 2</span>
+                    </div>
+                    <div>
+                        <input type="text" ng-model="" required placeholder="street" id="addressline2" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-12">
+                    <div>
+                        <span>Suburb</span>
+                    </div>
+                    <div>
+                        <ui-select ng-model="" theme="selectize">
+                            <ui-select-match placeholder="select a suburb">{{$select.selected.code}}</ui-select-match>
+                            <ui-select-choices repeat="item in allSuburbs | filter: $select.search">
+                                <span ng-bind-html="item.name | highlight: $select.search"></span>
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-12">
+                    <div>
+                        <span>Post Code</span>
+                    </div>
+                    <div>
+                        <input type="text" ng-model="" required placeholder="street" id="postCode" readonly="readonly" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

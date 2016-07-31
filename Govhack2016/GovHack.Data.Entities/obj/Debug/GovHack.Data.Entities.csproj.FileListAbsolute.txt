@@ -1,0 +1,10 @@
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Entities\bin\Debug\GovHack.Data.Entities.dll.config
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Entities\bin\Debug\GovHack.Data.Entities.dll
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Entities\bin\Debug\GovHack.Data.Entities.pdb
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Entities\obj\Debug\GovHack.Data.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Entities\obj\Debug\GovHack.Data.Entities.dll
+C:\Users\Ashish\Documents\Govhack2016\Govhack2016\GovHack.Data.Entities\obj\Debug\GovHack.Data.Entities.pdb

@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Govhack2016", "Govhack2016\Govhack2016.csproj", "{45D744AF-B3E5-45D2-BBD5-772AE8F33A99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosting", "Hosting", "{DD0E1DA4-1F13-4229-8296-8B3E4D9ED6EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{04B6970C-B338-46CC-B1C1-3A51183BCC22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GovHack.Common", "GovHack.Common\GovHack.Common.csproj", "{2EF0A4B9-B344-4C2D-AB8D-3649F9E5DD29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ResourceAccess", "ResourceAccess", "{42C9B31B-9374-4241-B759-8E8037CE8416}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GovHack.Data", "GovHack.Data.Repositories\GovHack.Data.csproj", "{B823E03F-0A0D-495D-A7C5-9FBE85598851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GovHack.Data.Contracts", "GovHack.Data.Contracts\GovHack.Data.Contracts.csproj", "{48FE29AF-9181-48F7-BFDE-D47FB4354984}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GovHack.Data.Entities", "GovHack.Data.Entities\GovHack.Data.Entities.csproj", "{5FEB7C3E-0E73-4A99-9D48-5D2533993C3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45D744AF-B3E5-45D2-BBD5-772AE8F33A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45D744AF-B3E5-45D2-BBD5-772AE8F33A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45D744AF-B3E5-45D2-BBD5-772AE8F33A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45D744AF-B3E5-45D2-BBD5-772AE8F33A99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EF0A4B9-B344-4C2D-AB8D-3649F9E5DD29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EF0A4B9-B344-4C2D-AB8D-3649F9E5DD29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EF0A4B9-B344-4C2D-AB8D-3649F9E5DD29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EF0A4B9-B344-4C2D-AB8D-3649F9E5DD29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B823E03F-0A0D-495D-A7C5-9FBE85598851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B823E03F-0A0D-495D-A7C5-9FBE85598851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B823E03F-0A0D-495D-A7C5-9FBE85598851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B823E03F-0A0D-495D-A7C5-9FBE85598851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48FE29AF-9181-48F7-BFDE-D47FB4354984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48FE29AF-9181-48F7-BFDE-D47FB4354984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48FE29AF-9181-48F7-BFDE-D47FB4354984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48FE29AF-9181-48F7-BFDE-D47FB4354984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FEB7C3E-0E73-4A99-9D48-5D2533993C3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FEB7C3E-0E73-4A99-9D48-5D2533993C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FEB7C3E-0E73-4A99-9D48-5D2533993C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FEB7C3E-0E73-4A99-9D48-5D2533993C3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{45D744AF-B3E5-45D2-BBD5-772AE8F33A99} = {DD0E1DA4-1F13-4229-8296-8B3E4D9ED6EB}
+		{2EF0A4B9-B344-4C2D-AB8D-3649F9E5DD29} = {04B6970C-B338-46CC-B1C1-3A51183BCC22}
+		{B823E03F-0A0D-495D-A7C5-9FBE85598851} = {42C9B31B-9374-4241-B759-8E8037CE8416}
+		{48FE29AF-9181-48F7-BFDE-D47FB4354984} = {42C9B31B-9374-4241-B759-8E8037CE8416}
+		{5FEB7C3E-0E73-4A99-9D48-5D2533993C3E} = {42C9B31B-9374-4241-B759-8E8037CE8416}
+	EndGlobalSection
+EndGlobal

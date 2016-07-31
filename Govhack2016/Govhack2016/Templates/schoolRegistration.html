@@ -1,0 +1,157 @@
+﻿<div class="row">
+    <div class="column-12">
+        <form name="schoolRegistrationForm" novalidate>
+            <div class="row">
+                <div class="column-12">
+                    <span>&nbsp;</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-12">
+                    <span>&nbsp;</span>
+                </div>
+            </div>
+            <div class="row" ng-if="!editMode">
+                <div>
+                    <div style="float:right">
+                        <div class="column-12">
+                            <div class="admin-booking">
+                                <div>
+                                    <a ng-click="addNewServiceOption()">ADD</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-12">
+                    <span>&nbsp;</span>
+                </div>
+            </div>
+            <div class="row" ng-if="!editMode">
+                <div>
+                    <div>
+                        <div class="column-12">
+                            <div class="column-3">
+                                <span>AGE GROUP</span>
+                            </div>
+                            <div class="column-2">
+                                <span>NUMBER OF CHILDREN</span>
+                            </div>
+                            <div class="column-3">
+                                <span>DAYS</span>
+                            </div>
+                            <div class="column-2">
+                                <span>HOURS</span>
+                            </div>
+                            <div class="column-2">
+                                <span>&nbsp;</span>
+                            </div>
+                            <div class="column-2">
+                                <span>&nbsp;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div ng-repeat="item in allServices">
+                            <div class="column-3">
+                                <span>{{item.ageGroup}}</span>
+                            </div>
+                            <div class="column-2">
+                                <span>{{item.numberOfChildren}}</span>
+                            </div>
+                            <div class="column-3">
+                                <span>{{item.days}}</span>
+                            </div>
+                            <div class="column-2">
+                                <span>{{item.hours}}</span>
+                            </div>
+                            <div class="column-2">
+                                <div ng-click="editSelectedServiceOption(item)">
+                                    <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="column-2">
+                                <div ng-click="deleteSelectedServiceOption(item)">
+                                    <i class="fa fa-trash-o fa-lg" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-if="editMode">
+                <div class="row">
+                    <div class="column-12">
+                        <div>
+                            <span>Age Group</span>
+                        </div>
+                        <div>
+                            <ui-select ng-model="" theme="selectize" class="admin-category-select" id="ageGroup">
+                                <ui-select-match placeholder="eg. 1 - 2 years">{{$select.selected.group}}</ui-select-match>
+                                <ui-select-choices repeat="item in allAgeGroups | filter: $select.search">
+                                    <span ng-bind-html="item.group | highlight: $select.search"></span>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column-12">
+                        <div>
+                            <span>Number of children</span>
+                        </div>
+                        <div>
+                            <input type="number" ng-model="" required placeholder="number of children accepted" id="numOfChildren" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column-12">
+                        <div>
+                            <span>OPERATION DAYS</span>
+                        </div>
+                        <div>
+                            <div class="column-4">
+                                <label>
+                                    <input type="checkbox" ng-click="setDay(days.sun)" ng-model="days.sun" />Sunday
+                                </label>
+                            </div>
+                            <div class="column-4">
+                                <label>
+                                    <input type="checkbox" ng-click="setDay(days.mon)" ng-model="days.mon" />Monday
+                                </label>
+                            </div>
+                            <div class="column-4">
+                                <label>
+                                    <input type="checkbox" ng-click="setDay(days.tue)" ng-model="days.tue" />Tuesday
+                                </label>
+                            </div>
+                            <div class="column-4">
+                                <label>
+                                    <input type="checkbox" ng-click="setDay(days.wed)" ng-model="days.wed" />Wednesday
+                                </label>
+                            </div>
+                            <div class="column-4">
+                                <label>
+                                    <input type="checkbox" ng-click="setDay(days.thu)" ng-model="days.thu" />Thursday
+                                </label>
+                            </div>
+                            <div class="column-4">
+                                <label>
+                                    <input type="checkbox" ng-click="setDay(days.fri)" ng-model="days.fri" />Friday
+                                </label>
+                            </div>
+                            <div class="column-4">
+                                <label>
+                                    <input type="checkbox" ng-click="setDay(days.sat)" ng-model="days.sat" />Saturday
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
